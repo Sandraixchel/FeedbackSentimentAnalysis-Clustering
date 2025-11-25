@@ -15,22 +15,23 @@ Analysis of 42,000+ customer reviews from OLIST Brazilian e-Commerce platform to
 ![Sentiment Distribution](images/SentimentDistribution.jpg)
 
 ## Project Structure
-- Data preprocessing and translation (Portuguese → English)
-- Sentiment classification using VADER
+- Data preprocessing and translation (Portuguese → English) with Azure Cognitive Services
+- Sentiment classification and polarity scores using VADER
 - Word frequency clustering analysis
 - Power BI visualizations (word clouds, sentiment trends)
 
 ## Methodology
 1. Loaded 42,000+ reviews from OLIST dataset
-2. Translated reviews from Portuguese to English
-3. Extracted meaningful words using Python (removed stopwords, filtered 2+ characters)
-4. Classified reviews into positive (>0.5), neutral (0-0.5), negative (<0)
-5. Analyzed top 100 words per sentiment category
-6. Created word cloud visualizations in Power BI
+2. Translated reviews from Portuguese to English via Translator Azure Service's API
+3. Calculate polarity scores of translated reviews with VADER
+4. Extracted meaningful words using Python (removed stopwords, filtered 2+ characters)
+5. Classified reviews into positive (>0.5), neutral (0-0.5), negative (<0)
+6. Analyzed top 100 words per sentiment category
+7. Created word cloud visualizations in Power BI
 
 ## Technologies Used
 - Python (data cleaning, text analysis)
-- VADER (sentiment analysis)
+- VADER (sentiment analysis, polarity scores)
 - Power BI (visualization)
 - Pandas, Re, Collections libraries
 
@@ -42,12 +43,7 @@ Analysis of 42,000+ customer reviews from OLIST Brazilian e-Commerce platform to
 ![Positive Word Cloud](images/WhyAreCustomersHappy.jpg)
 
 ## Recommendations
-- Optimize delivery logistics and set SLAs
+- Optimize delivery logistics
 - Implement stricter quality control
-- Create regional performance benchmarks
-- Upgrade to BERT-based sentiment analysis for improved accuracy
-
-## Files
-- `sentiment_analysis.py` - Main analysis script
-- `sentiment_words.csv` - Exported word frequencies
-- `dashboard.pbix` - Power BI visualization
+- Implement monthly sentiment tracking to measure impact of improvements
+- Use positive keywords as messaging for marketing campaigns and seller guidelines
