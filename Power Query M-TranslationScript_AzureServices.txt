@@ -1,0 +1,46 @@
+let
+    SourceText = [title_and_comment],
+    
+    // Use your specific endpoint from Azure Portal
+    BaseEndpoint = "https://powerbiteam1.cognitiveservices.azure.com/",
+    Url = BaseEndpoint & "/translator/text/v3.0/translate?from=pt&to=en",
+    
+    Body = "[{""Text"": """ & SourceText & """}]",
+    
+    Response = Web.Contents(
+        Url,
+        [
+            Headers = [
+                #"Ocp-Apim-Subscription-Key" = "my_key_goes_here",
+                #"Content-Type" = "application/json"
+            ],
+            Content = Text.ToBinary(Body)
+        ]
+    ),
+    JsonResponse = Json.Document(Response),
+    Translation = JsonResponse{0}[translations]{0}[text]
+in
+    Translation
+let
+    SourceText = [title_and_comment],
+    
+    // Use your specific endpoint from Azure Portal
+    BaseEndpoint = "https://powerbiteam1.cognitiveservices.azure.com/",
+    Url = BaseEndpoint & "/translator/text/v3.0/translate?from=pt&to=en",
+    
+    Body = "[{""Text"": """ & SourceText & """}]",
+    
+    Response = Web.Contents(
+        Url,
+        [
+            Headers = [
+                #"Ocp-Apim-Subscription-Key" = "my_key_goes_here",
+                #"Content-Type" = "application/json"
+            ],
+            Content = Text.ToBinary(Body)
+        ]
+    ),
+    JsonResponse = Json.Document(Response),
+    Translation = JsonResponse{0}[translations]{0}[text]
+in
+    Translation
