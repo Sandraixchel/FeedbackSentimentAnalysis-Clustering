@@ -1,6 +1,4 @@
 # Feedback Sentiment Analysis & Clustering - OLIST Brazilian e-Commerce
-Analyzed 42,000+ customer reviews using Python and Power BI to identify key satisfaction drivers and provide actionable business recommendations for OLIST Brazilian e-Commerce.
-
 👉 [**Download the Power BI Report (.pbix)**](https://drive.google.com/uc?export=download&id=1lzJParmPO_Kn_BspM1aC1FAen83M2BkY)  
 *A direct download link — no Google Drive preview.*
 
@@ -12,6 +10,9 @@ Analysis of 42,000+ customer reviews from OLIST Brazilian e-Commerce platform to
 - **Primary Pain Point**: Delivery delays dominate negative feedback
 - **Satisfaction Drivers**: Fast delivery + high-quality products = strong loyalty & recommendations
 - **Geographic Gaps**: São Paulo outperforms other cities; opportunity for regional standardization
+  
+### Sentiment Distribution
+![Sentiment Distribution](images/SentimentDistribution.jpg)
 
 ## Project Structure
 - Data preprocessing and translation (Portuguese → English)
@@ -35,8 +36,10 @@ Analysis of 42,000+ customer reviews from OLIST Brazilian e-Commerce platform to
 
 ## Key Insights
 **Why Customers Are Mad:** Delivery delays, missing/defective items, poor quality
+![Negative Word Cloud](images/WhyAreCustomersMad.jpg)
 
 **Why Customers Are Happy:** Fast delivery, high-quality products, excellent service
+![Positive Word Cloud](images/WhyAreCustomersHappy.jpg)
 
 ## Recommendations
 - Optimize delivery logistics and set SLAs
